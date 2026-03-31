@@ -222,7 +222,8 @@ for key, value in product_catalogue.items():
 input_code = input("Pleae Enter a prodcut code: ").strip().upper()
 if input_code in product_catalogue:
     print(f"The price of {input_code} is £{product_catalogue[input_code]:.2f}")
-
+else:
+    print("Erorr: Product code not found.")
 # -------------------------------------------
 # CHECKPOINT
 # -------------------------------------------
