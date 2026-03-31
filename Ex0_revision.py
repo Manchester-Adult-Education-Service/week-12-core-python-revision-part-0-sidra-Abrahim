@@ -39,7 +39,7 @@ print("-------------------------------------------\n"
 # Write your code below:
 price = 45.00
 VAT_RATE = 0.20
-total_cost = price + VAT_RATE
+total_cost = price + price * VAT_RATE
 print(f"Total cost is: {total_cost}")       #without rounding to 2 decimal places
 print(f"Total cost is: £{total_cost:.2f}") #round to 2 decimal places
 
@@ -176,8 +176,8 @@ for i in weekly_sales:
 
 average_sale = total_sales / len(weekly_sales)
 #print(f"Total Sales: {total_sales}")   #without rounding
-print(f"Total Sales: {total_sales:.2f}")
-print(f"Average Sales: {average_sale:.2f}")
+print(f"Total Sales: £{total_sales:.2f}")
+print(f"Average Sales: £{average_sale:.2f}")
 
 # -------------------------------------------
 # CHECKPOINT
@@ -217,7 +217,11 @@ product_catalogue = {
 # 4. If the code does not exist, print "Error: Product code not found."
 
 # Write your code below:
-
+for key, value in product_catalogue.items():
+    print(f"{key}: {value}")
+input_code = input("Pleae Enter a prodcut code: ").strip().upper()
+if input_code in product_catalogue:
+    print(f"The price of {input_code} is £{product_catalogue[input_code]:.2f}")
 
 # -------------------------------------------
 # CHECKPOINT
