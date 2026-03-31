@@ -37,7 +37,11 @@ print("-------------------------------------------\n"
 # 4. Print the final 'total_cost' using an f-string, formatted to two decimal places.
 
 # Write your code below:
-
+price = 45.00
+VAT_RATE = 0.20
+total_cost = price + VAT_RATE
+print(f"Total cost is: {total_cost}")       #without rounding to 2 decimal places
+print(f"Total cost is: £{total_cost: .2f}") #round to 2 decimal places
 
 # -------------------------------------------
 # CHECKPOINT
