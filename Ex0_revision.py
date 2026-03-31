@@ -41,7 +41,7 @@ price = 45.00
 VAT_RATE = 0.20
 total_cost = price + VAT_RATE
 print(f"Total cost is: {total_cost}")       #without rounding to 2 decimal places
-print(f"Total cost is: £{total_cost: .2f}") #round to 2 decimal places
+print(f"Total cost is: £{total_cost:.2f}") #round to 2 decimal places
 
 # -------------------------------------------
 # CHECKPOINT
@@ -170,7 +170,14 @@ weekly_sales = [120.50, 155.75, 95.00, 180.25, 130.50]
 # 5. Print both the 'total_sales' and 'average_sale', formatted to two decimal places.
 
 # Write your code below:
+total_sales = 0
+for i in weekly_sales:
+    total_sales = total_sales + i 
 
+average_sale = total_sales / len(weekly_sales)
+#print(f"Total Sales: {total_sales}")   #without rounding
+print(f"Total Sales: {total_sales:.2f}")
+print(f"Average Sales: {average_sale:.2f}")
 
 # -------------------------------------------
 # CHECKPOINT
